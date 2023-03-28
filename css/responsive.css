@@ -1,0 +1,81 @@
+
+/* მთავარი გვერდის რესფონსივი */
+@media (min-width: 651px){
+  .headerbg{
+    background-position: center;
+  }
+}
+@media only screen and (max-width: 650px){
+  .headerbg{
+  background-position: center;
+   background-image: url(../img/bgsmall\ .png);
+}}
+@media (max-width: 1030px){
+  .footericons{
+  display: none;}
+.footerdiv{
+  padding-bottom: 77px;
+}
+
+}
+@media (max-width: 768px) {
+  .burgerbar {
+    display: block;
+  }
+  .navigation {
+    display: none;
+  }
+  .navigation.activeNav{
+    display: block;
+  }
+  .flexheader{
+   flex-direction: column;
+   align-items: baseline;
+  }
+  .ulheader{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .map{
+    display: none;
+  }
+  .imgnatali{
+    height: 200px;
+    animation: natalizoom 8s infinite;
+ }
+ @keyframes natalizoom{
+  0%{transform: translate(220px, 0px) scale(1,1)}
+  50%{transform: translate(220px, 0px) scale(1.5, 1.5) }
+ 100%{transform: translate(220px, 0px)scale(1,1) }
+ }
+
+}
+@media(min-width: 320px) and (max-width:768px) {
+  .footerdiv{
+    height: auto;
+  }
+  .footerdiv1{
+    flex-direction: column;
+  }
+  .headerbg{
+    background-color: #dac8c8;
+  }
+
+}
+@media(min-width: 769px) and (max-width:1024px) {
+  .footerdiv{
+    height: auto;
+  }
+  .footerdiv1{
+    flex-direction: column;
+  }
+
+}
+@media (max-width: 510px){
+  .aboutmetext{
+    height: auto;
+    margin: -275px 0 0 -175px;
+  }
+}
