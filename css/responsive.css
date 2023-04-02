@@ -1,5 +1,3 @@
-
-/* მთავარი გვერდის რესფონსივი */
 @media (min-width: 651px){
   .headerbg{
     background-position: center;
@@ -13,10 +11,9 @@
 @media (max-width: 1030px){
   .footericons{
   display: none;}
-.footerdiv{
+  .footerdiv{
   padding-bottom: 77px;
 }
-
 }
 @media (max-width: 768px) {
   .burgerbar {
@@ -29,26 +26,56 @@
     display: block;
   }
   .flexheader{
-   flex-direction: column;
-   align-items: baseline;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-align: baseline;
+       -ms-flex-align: baseline;
+           align-items: baseline;
   }
   .ulheader{
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
   }
-
   .map{
     display: none;
   }
   .imgnatali{
     height: 200px;
-    animation: natalizoom 8s infinite;
+    -webkit-animation: natalizoom 8s infinite;
+            animation: natalizoom 8s infinite;
+ }
+ @-webkit-keyframes natalizoom{
+  0%{-webkit-transform: translate(220px, 0px) scale(1,1);transform: translate(220px, 0px) scale(1,1)}
+  50%{-webkit-transform: translate(220px, 0px) scale(1.5, 1.5);transform: translate(220px, 0px) scale(1.5, 1.5) }
+ 100%{-webkit-transform: translate(220px, 0px)scale(1,1);transform: translate(220px, 0px)scale(1,1) }
  }
  @keyframes natalizoom{
-  0%{transform: translate(220px, 0px) scale(1,1)}
-  50%{transform: translate(220px, 0px) scale(1.5, 1.5) }
- 100%{transform: translate(220px, 0px)scale(1,1) }
+  0%{-webkit-transform: translate(220px, 0px) scale(1,1);transform: translate(220px, 0px) scale(1,1)}
+  50%{-webkit-transform: translate(220px, 0px) scale(1.5, 1.5);transform: translate(220px, 0px) scale(1.5, 1.5) }
+ 100%{-webkit-transform: translate(220px, 0px)scale(1,1);transform: translate(220px, 0px)scale(1,1) }
+ }
+ .imgcupcake{
+  height: 100px;
+  -webkit-animation: move 8s infinite;
+          animation: move 8s infinite;
+ }
+ @-webkit-keyframes move{
+  0%{-webkit-transform: translate(0px, 30px) rotate(0deg);transform: translate(0px, 30px) rotate(0deg)}
+  50%{-webkit-transform: translate(20px, 20px)rotate(0deg);transform: translate(40px, 20px)rotate(0deg)}
+ 100%{-webkit-transform: translate(0px, 0px)rotate(60deg);transform: translate(10px, 0px)rotate(60deg)}
+ }
+ @keyframes move{
+  0%{-webkit-transform: translate(0px, 30px) rotate(0deg);transform: translate(0px, 30px) rotate(0deg)}
+  50%{-webkit-transform: translate(20px, 20px)rotate(0deg);transform: translate(40px, 20px)rotate(0deg)}
+ 100%{-webkit-transform: translate(0px, 0px)rotate(60deg);transform: translate(10px, 0px)rotate(60deg)}
  }
 
 }
@@ -57,10 +84,24 @@
     height: auto;
   }
   .footerdiv1{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .headerbg{
     background-color: #dac8c8;
+  }
+  .text{
+    height: auto;
+    width: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .aboutmetext{
+    height: auto;
+    max-width: 315px;
   }
 
 }
@@ -69,7 +110,10 @@
     height: auto;
   }
   .footerdiv1{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
 }
@@ -79,3 +123,25 @@
     margin: -275px 0 0 -175px;
   }
 }
+@media(max-width: 320px) {
+  .footerdiv{
+    height: auto;}
+  .text{
+   height: auto;
+   width: auto;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   text-align: center;
+    }
+    .aboutmetext{
+      height: auto;
+      max-width:  310px;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 90px;
+    }
+
+  }
+  

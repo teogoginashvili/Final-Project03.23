@@ -9,15 +9,24 @@
   padding-top: 30px;
 }
 .flexheader{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 10px;
 }
 .ulheader{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 480px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -26,15 +35,23 @@
   height: 60px;
   background-color: #f1e8d9;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center; 
-  transition: transform .2s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; 
+  -webkit-transition: -webkit-transform .2s; 
+  transition: -webkit-transform .2s; 
+  transition: transform .2s; 
+  transition: transform .2s, -webkit-transform .2s;
 }
-.logo :hover{
-  -ms-transform: scale(1.5); 
+.logo :hover{ 
   -webkit-transform: scale(1.5); 
-  transform: scale(1.5); 
+          transform: scale(1.5); 
 }
 .burgerbar{
   display: none;
@@ -47,14 +64,19 @@
   max-width: 1440px;
   width: 100%;
   height: 536px;
-  background-color: #f1e8d9;
+  background-color: #f1e8d9; 
   color: #e6e6e6;
 }
 .footerdiv1{
-  width: 90%;
+  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 80px;
   padding-left: 20px;
 }
@@ -71,8 +93,12 @@
   margin-block: 24px;
 }
 .footericons{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footericons div{
   margin-inline: 7px;
@@ -87,7 +113,6 @@
   position: relative;
   
 }
-
 .aboutmetext{
   max-width: 450px;
   height: 360px;  
@@ -95,9 +120,11 @@
   border-radius: 49% 51% 40% 60% / 98% 37% 63% 2%;
   background-color: #a7625d;
   color: #e6e6e6;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 1.8;
-  box-shadow: 10px 10px 5px 12px lightblue;
+  -webkit-box-shadow: 10px 10px 5px 12px lightblue;
+          box-shadow: 10px 10px 5px 12px lightblue;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -109,21 +136,33 @@
 }
 .imgnatali{
   height: 400px;
-  animation: natalizoom 8s infinite;
+  -webkit-animation: natalizoom 8s infinite;
+          animation: natalizoom 8s infinite;
+ }
+ @-webkit-keyframes natalizoom{
+  0%{-webkit-transform: translate(100px, 0px) scale(1,1);transform: translate(100px, 0px) scale(1,1)}
+  50%{-webkit-transform: translate(150px, 0px) scale(1.5, 1.5);transform: translate(150px, 0px) scale(1.5, 1.5) }
+ 100%{-webkit-transform: translate(200px, 0px)scale(1,1);transform: translate(200px, 0px)scale(1,1) }
  }
  @keyframes natalizoom{
-  0%{transform: translate(100px, 0px) scale(1,1)}
-  50%{transform: translate(150px, 0px) scale(1.5, 1.5) }
- 100%{transform: translate(200px, 0px)scale(1,1) }
+  0%{-webkit-transform: translate(100px, 0px) scale(1,1);transform: translate(100px, 0px) scale(1,1)}
+  50%{-webkit-transform: translate(150px, 0px) scale(1.5, 1.5);transform: translate(150px, 0px) scale(1.5, 1.5) }
+ 100%{-webkit-transform: translate(200px, 0px)scale(1,1);transform: translate(200px, 0px)scale(1,1) }
  }
  .imgcupcake{
   height: 100px;
-  animation: move 8s infinite;
+  -webkit-animation: move 8s infinite;
+          animation: move 8s infinite;
+ }
+ @-webkit-keyframes move{
+  0%{-webkit-transform: translate(0px, 300px) rotate(0deg);transform: translate(0px, 300px) rotate(0deg)}
+  50%{-webkit-transform: translate(400px, 200px)rotate(180deg);transform: translate(400px, 200px)rotate(180deg)}
+ 100%{-webkit-transform: translate(1000px, 30px)rotate(360deg);transform: translate(1000px, 30px)rotate(360deg)}
  }
  @keyframes move{
-  0%{transform: translate(0px, 300px) rotate(0deg)}
-  50%{transform: translate(400px, 200px)rotate(180deg)}
- 100%{transform: translate(1000px, 30px)rotate(360deg)}
+  0%{-webkit-transform: translate(0px, 300px) rotate(0deg);transform: translate(0px, 300px) rotate(0deg)}
+  50%{-webkit-transform: translate(400px, 200px)rotate(180deg);transform: translate(400px, 200px)rotate(180deg)}
+ 100%{-webkit-transform: translate(1000px, 30px)rotate(360deg);transform: translate(1000px, 30px)rotate(360deg)}
  }
 
 
@@ -267,20 +306,34 @@ h3{
  .row{
   max-width: 1200px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: auto;
-  align-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
  }
  .box{
   width: 370px;
   height: 450px;
   background-color: #ec959b;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
  }
@@ -304,9 +357,15 @@ h3{
   height: 23px;
   background-color: #f1e8d9;
   border-radius: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 28px;
  }
  .box2{
